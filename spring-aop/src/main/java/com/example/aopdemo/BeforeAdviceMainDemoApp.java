@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.example.aopdemo.dao.AccountDao;
 import com.example.aopdemo.dao.MembershipDAO;
 
-public class MainDemoApp {
+public class BeforeAdviceMainDemoApp {
 
 	public static void main(String[] args) {
 		// read spring config java class
@@ -17,7 +17,11 @@ public class MainDemoApp {
 		
 		MembershipDAO membershipDAO = context.getBean("membershipDao", MembershipDAO.class);
 		
-		accountDao.addAccount(new Account(), true);
+		Account myAccount = new Account();
+		myAccount.setName("David Jones");
+		myAccount.setLevel("Platinum");
+		
+		accountDao.addAccount(myAccount, true);
 		accountDao.doWork();
 		
 		// calling accountDao getter/setter methods

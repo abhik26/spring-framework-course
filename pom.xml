@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -9,9 +10,15 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<springframework.version>5.2.9.RELEASE</springframework.version>
+		<springsecurity.version>5.4.1</springsecurity.version>
 	</properties>
 	<modules>
 		<module>spring-aop</module>
+		<module>spring-mvc</module>
+		<module>spring-security</module>
+		<module>spring-configuration-xml</module>
+		<module>spring-configuration-java-no-xml</module>
 	</modules>
 	<build>
 		<plugins>
@@ -36,19 +43,19 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>${springframework.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>${springframework.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>${springframework.version}</version>
 		</dependency>
 	</dependencies>
 </project>
