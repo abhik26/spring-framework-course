@@ -19,6 +19,8 @@
 		<module>spring-security</module>
 		<module>spring-configuration-xml</module>
 		<module>spring-configuration-java-no-xml</module>
+		<module>web-customer-tracker</module>
+		<module>hibernate</module>
 	</modules>
 	<build>
 		<plugins>
