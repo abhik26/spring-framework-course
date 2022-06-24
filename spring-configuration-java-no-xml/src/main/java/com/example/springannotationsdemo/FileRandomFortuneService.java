@@ -23,7 +23,7 @@ public class FileRandomFortuneService implements FortuneService {
 		try {
 			List<String> fortunes = new ArrayList<String>();
 			fileReader = 
-					new FileReader("D:\\Documents\\eclipse-workspace\\spring-annotations-demo\\src\\fortunes.txt");
+					new FileReader(this.getClass().getClassLoader().getResource("fortunes.txt").getPath());
 			br = new BufferedReader(fileReader);
 			String line;
 			
@@ -60,7 +60,7 @@ public class FileRandomFortuneService implements FortuneService {
 		try {
 			List<String> fortunes = new ArrayList<String>();
 			fileReader = 
-					new FileReader("D:\\Documents\\eclipse-workspace\\spring-annotations-demo\\src\\fortunes.txt");
+					new FileReader(this.getClass().getClassLoader().getResource("fortunes.txt").getPath());
 			br = new BufferedReader(fileReader);
 			String line;
 			System.out.println("Reading all the fortunes from the file");
